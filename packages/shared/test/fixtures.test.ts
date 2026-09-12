@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { answers, assignment, criterionById, groundTruth, students } from "../src/data";
+import { answers, assignment, criterionById, englishAnswers, englishAssignment, englishStudents, groundTruth, seededAnswers, students } from "../src/data";
 import { mockAnalyze } from "../src/mock-analyzer";
 import { AnalysisResultSchema, type Question } from "../src/schemas";
 
@@ -94,6 +94,87 @@ describe("mockAnalyze", () => {
       expect(result.questionId).toBe(question.id);
       expect(result.criteria).toHaveLength(question.rubric.criteria.length);
       expect(result.feedbackDraft.length).toBeGreaterThan(40);
+    }
+  });
+});
+
+describe("English exam seed", () => {
+  const eq = (id: string) => englishAssignment.questions.find((q) => q.id === id)!;
+  const analyze = (answerId: string) => {
+    const a = englishAnswers.find((x) => x.id === answerId)!;
+    return mockAnalyze(a, englishAssignment, eq(a.questionId), groundTruth);
+  };
+
+  it("has five ordered questions whose rubrics match the exam's scoring", () => {
+    expect(englishAssignment.questions.map((q) => q.index)).toEqual([1, 2, 3, 4, 5]);
+    const shape = englishAssignment.questions.map((q) => q.rubric.criteria.map((c) => `${c.id}:${c.bands.map((b) => b.points).join("/")}`));
+    expect(shape).toEqual([
+      ["comparison:10/5/0"],
+      ["order_items:20/15/10/5/0"],
+      ["order_items:20/15/10/5/0"],
+      ["excuse:10/5/0"],
+      ["task_content:4/3/2/1/0", "grammar_accuracy:4/3/2/1/0", "vocabulary_range:4/3/2/1/0"],
+    ]);
+    for (const q of englishAssignment.questions) {
+      expect(q.lmsQuestionId).not.toBe("");
+      for (const c of q.rubric.criteria) expect(c.bands[0]!.points).toBe(c.maxPoints);
+    }
+  });
+
+  it("has every rostered student answer every question, with ids unique across the whole seed", () => {
+    expect(englishStudents).toHaveLength(10);
+    for (const q of englishAssignment.questions) {
+      expect(englishAnswers.filter((a) => a.questionId === q.id).map((a) => a.studentIndex)).toEqual([...Array(10)].map((_, i) => i + 1));
+    }
+    expect(new Set(seededAnswers.map((a) => a.id)).size).toBe(seededAnswers.length);
+  });
+
+  it("has ground truth for every answer, with verbatim evidence, vocabulary tags, valid levels, and no gaps at the top band", () => {
+    for (const a of englishAnswers) {
+      const q = eq(a.questionId);
+      const gt = groundTruth[a.id];
+      expect(gt, a.id).toBeDefined();
+      expect(gt!.criteria.map((c) => c.criterionId)).toEqual(q.rubric.criteria.map((c) => c.id));
+      for (const c of gt!.criteria) {
+        const crit = criterionById(c.criterionId, englishAssignment);
+        for (const quote of c.evidence) expect(a.text, `${a.id}: "${quote}"`).toContain(quote);
+        for (const tag of c.missingConcepts) expect(crit.concepts, a.id).toContain(tag);
+        expect(crit.bands.map((b) => b.level), a.id).toContain(c.level);
+        if (c.level === crit.bands[0]!.level) expect(c.missingConcepts, a.id).toEqual([]);
+      }
+    }
+  });
+
+  it("scores the listening questions at 5 points per correctly written item", () => {
+    for (const a of englishAnswers.filter((x) => x.questionId.startsWith("q-eng-order-"))) {
+      const r = analyze(a.id);
+      expect(r.suggestedTotal, a.id).toBe(20 - 5 * r.missingConcepts.length);
+    }
+  });
+
+  it("sets up a consistency pair on every question: two students with the same gap", () => {
+    const pairs: [string, string, string][] = [
+      ["e-q1-02", "e-q1-06", "population_comparison"],
+      ["e-q2-02", "e-q2-05", "dessert"],
+      ["e-q3-03", "e-q3-06", "main_course"],
+      ["e-q4-03", "e-q4-08", "supporting_detail"],
+      ["e-q5-03", "e-q5-04", "reason"],
+    ];
+    for (const [a, b, tag] of pairs) {
+      const ra = analyze(a);
+      const rb = analyze(b);
+      expect(ra.missingConcepts, a).toContain(tag);
+      expect(rb.missingConcepts, b).toContain(tag);
+      expect(ra.suggestedTotal).toBe(rb.suggestedTotal);
+    }
+  });
+
+  it("produces a schema-valid mock analysis for every answer", () => {
+    for (const a of englishAnswers) {
+      const r = analyze(a.id);
+      expect(() => AnalysisResultSchema.parse(r)).not.toThrow();
+      expect(r.criteria).toHaveLength(eq(a.questionId).rubric.criteria.length);
+      expect(r.feedbackDraft.length).toBeGreaterThan(40);
     }
   });
 });

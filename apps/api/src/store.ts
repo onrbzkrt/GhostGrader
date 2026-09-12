@@ -1,9 +1,9 @@
 import { existsSync, mkdirSync, readFileSync, renameSync, writeFileSync } from "node:fs";
 import { dirname } from "node:path";
 import {
-  answers as seededAnswers,
-  assignment as seededAssignment,
-  students as seededStudents,
+  seededAnswers,
+  seededAssignments,
+  seededStudents,
   type Answer,
   type Assignment,
   type Course,
@@ -13,8 +13,12 @@ import {
   type Teacher,
 } from "@gg/shared";
 
-/** Bump when StoreData changes shape. A data file on another version is discarded and reseeded. */
-export const SCHEMA_VERSION = 2;
+/**
+ * Bump when StoreData changes shape, or when the seed changes in a way an
+ * existing demo data file should pick up. A data file on another version is
+ * discarded and reseeded. 3: the Grade 8 English exam joins the seed.
+ */
+export const SCHEMA_VERSION = 3;
 
 export interface SessionState {
   decisions: Decision[];
@@ -63,12 +67,13 @@ export function seedData(opts: SeedOptions = {}): StoreData {
     ],
     courses: [
       { id: "c-chem101", teacherId: "t-demo", name: "CHEM 101: General Chemistry", term: "Fall 2026", lmsCourseId: "lms-c-chem101" },
+      { id: "c-eng8", teacherId: "t-demo", name: "ENG 8: English", term: "Fall 2026", lmsCourseId: "lms-c-eng8" },
       { id: "c-hist210", teacherId: "t-second", name: "HIST 210: Modern Europe", term: "Fall 2026", lmsCourseId: "" },
     ],
     students: withAnswers ? [...seededStudents] : [],
-    // The seeded assignment ships with its rubrics written. Its LMS ids let a
-    // configured LMS pull into it later without clobbering those rubrics.
-    assignments: [{ ...seededAssignment, updatedAt: Date.now() }],
+    // The seeded assignments ship with their rubrics written. Their LMS ids let a
+    // configured LMS pull into them later without clobbering those rubrics.
+    assignments: seededAssignments.map((a) => ({ ...a, updatedAt: Date.now() })),
     answers: withAnswers ? seededAnswers.map((a) => ({ ...a, pulledAt: Date.now() })) : [],
     sessions: {},
     pushes: {},

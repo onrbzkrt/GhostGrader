@@ -73,12 +73,13 @@ describe("pull", () => {
     const { post, get } = setup();
     await post("/sync/pull", { lmsAssignmentId: LMS_ID });
     const before = await (await get(`/assignments/${assignment.id}/answers`)).json();
+    const assignmentsBefore = (await (await get("/assignments")).json()).length;
     const second = await (await post("/sync/pull", { lmsAssignmentId: LMS_ID })).json();
     expect(second.answers).toEqual({ created: 0, updated: 0, unchanged: 20, skipped: 0 });
     expect(await (await get(`/assignments/${assignment.id}/answers`)).json()).toEqual(
       before.map((a: { pulledAt: number }) => ({ ...a, pulledAt: expect.any(Number) })),
     );
-    expect((await (await get("/assignments")).json()).length).toBe(1);
+    expect((await (await get("/assignments")).json()).length).toBe(assignmentsBefore);
   });
 
   it("does not invalidate cached prompts when nothing about the questions changed", async () => {

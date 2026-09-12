@@ -63,6 +63,16 @@ Q1 answer ids must stay `sub-01`..`sub-15`: `ground-truth.json` and
 `fixtures/analysis/*.json` are keyed by them. Q1 and Q2 deliberately share the
 tag `quantitative_reference` to prove per-question scoping.
 
+A second seeded assignment, `eng8-open-ended` (course `c-eng8`, also `t-demo`),
+is a Grade 8 English exam with five short-answer questions and a separate
+10-student roster (`stu-e01`..`stu-e10`). Q1 is a written comparison (1 criterion,
+10/5/0), Q2 and Q3 are listening tasks (1 criterion, 5 points per correct menu
+item out of 20), Q4 is a dialogue question (10/5/0), and Q5 is a paragraph with a
+3-criterion analytic rubric (4 pts each). All 50 answers (`e-q<n>-<nn>`) have
+ground truth. Fixtures are in `fixtures/english8/`, and `data.ts` merges its
+ground truth into `groundTruth` (answer ids are unique across assignments). The
+store seeds from `seededAssignments` / `seededStudents` / `seededAnswers`.
+
 ### API routes (`apps/api/src/app.ts`)
 
 Public: `GET /health` (analyzer mode, `lms` name or null), `GET /teachers`.
@@ -103,7 +113,8 @@ the grade and comment as form state. Panel tabs are in `grading/tabs/`.
 - **Teacher scoping:** a foreign resource returns 404, never 403.
 - **Store schema:** `Store` (`apps/api/src/store.ts`) reads its JSON file with a
   plain cast. Any change to `StoreData`'s shape must bump `SCHEMA_VERSION`; a
-  file on another version is discarded and reseeded.
+  file on another version is discarded and reseeded. Bump it as well when the
+  seed gains data that existing demo files should pick up.
 - **`@gg/shared` is consumed as TypeScript source.** It has no build step;
   consumers include `../../packages/shared/src` in their tsconfig.
 - **Adding an LMS** means implementing `LmsAdapter` (`apps/api/src/lms/`) and

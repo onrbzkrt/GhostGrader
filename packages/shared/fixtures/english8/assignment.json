@@ -1,0 +1,386 @@
+{
+  "id": "eng8-open-ended",
+  "teacherId": "t-demo",
+  "courseId": "c-eng8",
+  "title": "Grade 8 English: Open-Ended Questions",
+  "course": "ENG 8: English",
+  "learningObjectives": [
+    "E8.1.W1: Students will be able to write a short and simple paragraph comparing two objects.",
+    "E8.1.L1: Students will be able to understand the specific information in short conversations on everyday topics, such as accepting and refusing an offer/invitation, apologizing and making simple inquiries.",
+    "E8.2.W1: Students will be able to write a short and simple paragraph about regular activities of teenagers."
+  ],
+  "questions": [
+    {
+      "id": "q-eng-compare",
+      "index": 1,
+      "title": "Comparing two countries",
+      "prompt": "Language skill: Making simple comparisons (E8.1.W1)\n\nCountry        Weather                  Population\nNew Zealand    Up to 45 °C in summer    4.7 million\nCanada         Up to 25 °C in summer    35 million\n\nLook at the table above. Compare the countries' population and weather. Write one sentence for each feature.",
+      "rubric": {
+        "id": "rubric-eng-compare-v1",
+        "criteria": [
+          {
+            "id": "comparison",
+            "title": "Comparison of weather and population",
+            "description": "Accurately compares both features (weather and population) and complies with English grammar rules. Spelling and punctuation errors are ignored.",
+            "maxPoints": 10,
+            "concepts": [
+              "weather_comparison",
+              "population_comparison",
+              "factual_accuracy",
+              "grammar"
+            ],
+            "bands": [
+              {
+                "level": "Full",
+                "points": 10,
+                "descriptor": "Accurately compares both features (weather and population) and complies with English grammar rules. Spelling and punctuation errors are ignored."
+              },
+              {
+                "level": "Partial",
+                "points": 5,
+                "descriptor": "Accurately compares only one feature (either weather or population), or makes both comparisons with minor structural or grammar errors that do not impede communication."
+              },
+              {
+                "level": "Invalid",
+                "points": 0,
+                "descriptor": "Blank; factually incorrect comparisons (e.g. 'Canada is hotter than New Zealand'); correct statements mixed with incorrect ones; or sentences that completely violate English grammar."
+              }
+            ]
+          }
+        ]
+      },
+      "anchors": [
+        {
+          "label": "10 points",
+          "text": "New Zealand is hotter than Canada. Canada is more crowded than New Zealand."
+        },
+        {
+          "label": "10 points",
+          "text": "New Zealand is hotter and less crowded than Canada."
+        },
+        {
+          "label": "5 points (one feature)",
+          "text": "New Zealand is hotter than Canada."
+        },
+        {
+          "label": "0 points (factually incorrect)",
+          "text": "New Zealand is more crowded than Canada. Canada is hotter than New Zealand."
+        },
+        {
+          "label": "0 points (correct mixed with incorrect)",
+          "text": "New Zealand is hotter than Canada and Canada is not colder than New Zealand."
+        }
+      ],
+      "lmsQuestionId": "lms-q-eng-compare"
+    },
+    {
+      "id": "q-eng-order-barbara",
+      "index": 2,
+      "title": "Listening: Barbara's order",
+      "prompt": "E8.1.L1: Students will be able to understand the specific information in short conversations on everyday topics, such as accepting and refusing an offer/invitation, apologizing and making simple inquiries.\n\nPart 1: Barbara's Order\nListen to the dialogue between the waiter and Barbara. Write down the food and drink she orders in the spaces provided below. (Note: If she does not order anything for a category, write \"Nothing / None\".)\n\nSoup: ....................\nMain Course: ....................\nDessert: ....................\nBeverage: ....................",
+      "rubric": {
+        "id": "rubric-eng-order-barbara-v1",
+        "criteria": [
+          {
+            "id": "order_items",
+            "title": "Food and drink items",
+            "description": "Writes what was ordered for each category. Answer key: Soup: Lentil Soup; Main Course: Mixed Kebab; Dessert: Apple Pie; Beverage: Nothing / None. A tag is missing when that category is wrong or left out.",
+            "maxPoints": 20,
+            "concepts": [
+              "soup",
+              "main_course",
+              "dessert",
+              "beverage"
+            ],
+            "bands": [
+              {
+                "level": "All four items",
+                "points": 20,
+                "descriptor": "Identifies and writes all food and drink items accurately and completely."
+              },
+              {
+                "level": "Three items",
+                "points": 15,
+                "descriptor": "Accurately identifies 3 items from the listening text, but writes 1 item incorrectly or leaves it out."
+              },
+              {
+                "level": "Two items",
+                "points": 10,
+                "descriptor": "Accurately identifies 2 items from the listening text, but writes the other items incorrectly or leaves them out."
+              },
+              {
+                "level": "One item",
+                "points": 5,
+                "descriptor": "Accurately writes only 1 item."
+              },
+              {
+                "level": "No items",
+                "points": 0,
+                "descriptor": "Fails to write any item correctly or leaves the question completely blank."
+              }
+            ]
+          }
+        ]
+      },
+      "anchors": [
+        {
+          "label": "Answer key (20 points)",
+          "text": "Soup: Lentil Soup\nMain Course: Mixed Kebab\nDessert: Apple Pie\nBeverage: Nothing / None"
+        }
+      ],
+      "lmsQuestionId": "lms-q-eng-order-barbara"
+    },
+    {
+      "id": "q-eng-order-adam",
+      "index": 3,
+      "title": "Listening: Adam's order",
+      "prompt": "E8.1.L1: Students will be able to understand the specific information in short conversations on everyday topics, such as accepting and refusing an offer/invitation, apologizing and making simple inquiries.\n\nPart 2: Adam's Order\nNow, listen to the second dialogue between the waiter and Adam. Write down what Adam orders for each category below. (Note: If he does not order anything for a category, write \"Nothing / None\".)\n\nSoup: ....................\nMain Course: ....................\nDessert: ....................\nBeverage: ....................",
+      "rubric": {
+        "id": "rubric-eng-order-adam-v1",
+        "criteria": [
+          {
+            "id": "order_items",
+            "title": "Food and drink items",
+            "description": "Writes what was ordered for each category. Answer key: Soup: Chicken Soup; Main Course: Grilled chicken; Dessert: Piece of cake; Beverage: A glass of lemonade. A tag is missing when that category is wrong or left out.",
+            "maxPoints": 20,
+            "concepts": [
+              "soup",
+              "main_course",
+              "dessert",
+              "beverage"
+            ],
+            "bands": [
+              {
+                "level": "All four items",
+                "points": 20,
+                "descriptor": "Identifies and writes all food and drink items accurately and completely."
+              },
+              {
+                "level": "Three items",
+                "points": 15,
+                "descriptor": "Accurately identifies 3 items from the listening text, but writes 1 item incorrectly or leaves it out."
+              },
+              {
+                "level": "Two items",
+                "points": 10,
+                "descriptor": "Accurately identifies 2 items from the listening text, but writes the other items incorrectly or leaves them out."
+              },
+              {
+                "level": "One item",
+                "points": 5,
+                "descriptor": "Accurately writes only 1 item."
+              },
+              {
+                "level": "No items",
+                "points": 0,
+                "descriptor": "Fails to write any item correctly or leaves the question completely blank."
+              }
+            ]
+          }
+        ]
+      },
+      "anchors": [
+        {
+          "label": "Answer key (20 points)",
+          "text": "Soup: Chicken Soup\nMain Course: Grilled chicken\nDessert: Piece of cake\nBeverage: A glass of lemonade"
+        }
+      ],
+      "lmsQuestionId": "lms-q-eng-order-adam"
+    },
+    {
+      "id": "q-eng-excuse",
+      "index": 4,
+      "title": "Kevin's excuse",
+      "prompt": "E8.1.L1: Students will be able to understand the specific information in short conversations on everyday topics, such as accepting and refusing an offer/invitation, apologizing and making simple inquiries.\n\nJane: Would you like to come to a rock concert with us tonight?\nKevin: That would be great, but my friends are going to visit me this evening.\n\nRead the dialogue above. What is Kevin's excuse for refusing the invitation?",
+      "rubric": {
+        "id": "rubric-eng-excuse-v1",
+        "criteria": [
+          {
+            "id": "excuse",
+            "title": "Kevin's excuse",
+            "description": "States that Kevin's friends or guests are coming to see him, consistent with the dialogue, in grammatical English. Spelling and punctuation errors are not taken into account.",
+            "maxPoints": 10,
+            "concepts": [
+              "excuse_identified",
+              "supporting_detail",
+              "factual_accuracy",
+              "grammar"
+            ],
+            "bands": [
+              {
+                "level": "Full",
+                "points": 10,
+                "descriptor": "All key elements requested in the question are provided completely, the answer fits the context and logic of the dialogue, and English grammar rules are largely followed. Spelling and punctuation errors do not result in deductions."
+              },
+              {
+                "level": "Partial",
+                "points": 5,
+                "descriptor": "The main idea is understood and the answer is generally correct, but some elements are missing (e.g. where or when), or there are prominent errors in basic grammatical structures that partially impede communication."
+              },
+              {
+                "level": "Invalid",
+                "points": 0,
+                "descriptor": "Blank or incorrect (e.g. 'He is going to visit his friends'); relevant but factually incorrect (e.g. 'He is going to a rock concert with his friends'); or correct statements mixed with incorrect ones."
+              }
+            ]
+          }
+        ]
+      },
+      "anchors": [
+        {
+          "label": "10 points",
+          "text": "His friends are going to visit him."
+        },
+        {
+          "label": "10 points",
+          "text": "He is having friends over."
+        },
+        {
+          "label": "5 points (detail missing)",
+          "text": "He is going to meet friends."
+        },
+        {
+          "label": "5 points (grammar slip)",
+          "text": "He having guests at home."
+        },
+        {
+          "label": "0 points (wrong)",
+          "text": "He is going to visit his friends."
+        },
+        {
+          "label": "0 points (correct mixed with incorrect)",
+          "text": "He is having friends over and they are going to a rock concert together."
+        }
+      ],
+      "lmsQuestionId": "lms-q-eng-excuse"
+    },
+    {
+      "id": "q-eng-weekend",
+      "index": 5,
+      "title": "Weekend activities",
+      "prompt": "Language skill: Writing about regular activities of teenagers (E8.2.W1)\n\nWrite a short paragraph answering the questions: \"What do you usually do on weekends? Why do you prefer these activities, and who do you spend your time with?\" Write 3-4 sentences, max. 50 words.",
+      "rubric": {
+        "id": "rubric-eng-weekend-v1",
+        "criteria": [
+          {
+            "id": "task_content",
+            "title": "Task completion and content",
+            "description": "Answers all three parts of the question: the activity, the reason, and the person.",
+            "maxPoints": 4,
+            "concepts": [
+              "activity",
+              "reason",
+              "companion"
+            ],
+            "bands": [
+              {
+                "level": "Full",
+                "points": 4,
+                "descriptor": "All elements in the question (activity, reason, person) are fully and comprehensively provided."
+              },
+              {
+                "level": "Good",
+                "points": 3,
+                "descriptor": "All elements are present, but details are slightly limited."
+              },
+              {
+                "level": "Partial",
+                "points": 2,
+                "descriptor": "One of the elements (e.g. reason or person) is completely missing."
+              },
+              {
+                "level": "Insufficient",
+                "points": 1,
+                "descriptor": "Content is irrelevant to the question or highly inadequate."
+              },
+              {
+                "level": "Blank",
+                "points": 0,
+                "descriptor": "Blank, or nothing that can be assessed."
+              }
+            ]
+          },
+          {
+            "id": "grammar_accuracy",
+            "title": "Grammar and accuracy",
+            "description": "Uses the Simple Present Tense and basic sentence structures accurately.",
+            "maxPoints": 4,
+            "concepts": [
+              "simple_present",
+              "sentence_structure"
+            ],
+            "bands": [
+              {
+                "level": "Full",
+                "points": 4,
+                "descriptor": "Simple Present Tense and basic structures are used accurately."
+              },
+              {
+                "level": "Good",
+                "points": 3,
+                "descriptor": "1-2 minor grammar errors that do not impede communication."
+              },
+              {
+                "level": "Partial",
+                "points": 2,
+                "descriptor": "Heavy grammar errors occasionally obscure the meaning."
+              },
+              {
+                "level": "Insufficient",
+                "points": 1,
+                "descriptor": "Basic structures could not be formed; sentences are incomprehensible."
+              },
+              {
+                "level": "Blank",
+                "points": 0,
+                "descriptor": "Blank, or nothing that can be assessed."
+              }
+            ]
+          },
+          {
+            "id": "vocabulary_range",
+            "title": "Vocabulary and range",
+            "description": "Uses appropriate, varied vocabulary related to free-time activities.",
+            "maxPoints": 4,
+            "concepts": [
+              "topic_vocabulary",
+              "vocabulary_variety"
+            ],
+            "bands": [
+              {
+                "level": "Full",
+                "points": 4,
+                "descriptor": "Appropriate, varied, and accurate vocabulary related to the topic is used."
+              },
+              {
+                "level": "Good",
+                "points": 3,
+                "descriptor": "Basic vocabulary is sufficient, but variety is low."
+              },
+              {
+                "level": "Partial",
+                "points": 2,
+                "descriptor": "Limited and repetitive vocabulary range."
+              },
+              {
+                "level": "Insufficient",
+                "points": 1,
+                "descriptor": "Extremely poor vocabulary knowledge."
+              },
+              {
+                "level": "Blank",
+                "points": 0,
+                "descriptor": "Blank, or nothing that can be assessed."
+              }
+            ]
+          }
+        ]
+      },
+      "anchors": [],
+      "lmsQuestionId": "lms-q-eng-weekend"
+    }
+  ],
+  "updatedAt": 0,
+  "lmsAssignmentId": "lms-a-eng8",
+  "lastPulledAt": 0
+}

@@ -1,0 +1,52 @@
+[
+  {
+    "id": "stu-e01",
+    "name": "Elif Yılmaz",
+    "lmsStudentId": "stu-e01"
+  },
+  {
+    "id": "stu-e02",
+    "name": "Mehmet Kaya",
+    "lmsStudentId": "stu-e02"
+  },
+  {
+    "id": "stu-e03",
+    "name": "Zeynep Demir",
+    "lmsStudentId": "stu-e03"
+  },
+  {
+    "id": "stu-e04",
+    "name": "Can Öztürk",
+    "lmsStudentId": "stu-e04"
+  },
+  {
+    "id": "stu-e05",
+    "name": "Ayşe Çelik",
+    "lmsStudentId": "stu-e05"
+  },
+  {
+    "id": "stu-e06",
+    "name": "Burak Arslan",
+    "lmsStudentId": "stu-e06"
+  },
+  {
+    "id": "stu-e07",
+    "name": "Nehir Aydın",
+    "lmsStudentId": "stu-e07"
+  },
+  {
+    "id": "stu-e08",
+    "name": "Emre Şahin",
+    "lmsStudentId": "stu-e08"
+  },
+  {
+    "id": "stu-e09",
+    "name": "Deniz Koç",
+    "lmsStudentId": "stu-e09"
+  },
+  {
+    "id": "stu-e10",
+    "name": "Ece Yıldız",
+    "lmsStudentId": "stu-e10"
+  }
+]

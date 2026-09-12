@@ -1,0 +1,985 @@
+{
+  "e-q1-01": {
+    "criteria": [
+      {
+        "criterionId": "comparison",
+        "level": "Full",
+        "evidence": [
+          "New Zealand is hotter than Canada",
+          "Canada is more crowded than New Zealand"
+        ],
+        "missingConcepts": []
+      }
+    ],
+    "strength": "you compared both the weather and the population correctly, in two clear sentences.",
+    "improvement": "try combining both comparisons into one sentence, such as 'New Zealand is hotter and less crowded than Canada'."
+  },
+  "e-q1-02": {
+    "criteria": [
+      {
+        "criterionId": "comparison",
+        "level": "Partial",
+        "evidence": [
+          "New Zealand is hotter than Canada"
+        ],
+        "missingConcepts": [
+          "population_comparison"
+        ]
+      }
+    ],
+    "strength": "your weather comparison is correct and uses the comparative form well.",
+    "improvement": "add a second sentence that compares the population, for example which country is more crowded."
+  },
+  "e-q1-03": {
+    "criteria": [
+      {
+        "criterionId": "comparison",
+        "level": "Full",
+        "evidence": [
+          "New Zealand is hotter and less crowded than Canada"
+        ],
+        "missingConcepts": []
+      }
+    ],
+    "strength": "you compared both features accurately in a single, well-built sentence.",
+    "improvement": "you could also try writing the same idea from Canada's side to practise 'colder' and 'more crowded'."
+  },
+  "e-q1-04": {
+    "criteria": [
+      {
+        "criterionId": "comparison",
+        "level": "Full",
+        "evidence": [
+          "Canada is colder than New Zeland",
+          "new zealand is less crowded than canada"
+        ],
+        "missingConcepts": []
+      }
+    ],
+    "strength": "both of your comparisons are correct and grammatical.",
+    "improvement": "check the spelling and capital letters of country names, like 'New Zealand' and 'Canada'."
+  },
+  "e-q1-05": {
+    "criteria": [
+      {
+        "criterionId": "comparison",
+        "level": "Invalid",
+        "evidence": [
+          "New Zealand is more crowded than Canada",
+          "Canada is hotter than New Zealand"
+        ],
+        "missingConcepts": [
+          "factual_accuracy"
+        ]
+      }
+    ],
+    "strength": "your sentences use the comparative structure correctly.",
+    "improvement": "look at the table again: Canada has more people and New Zealand is hotter, so both comparisons need to be reversed."
+  },
+  "e-q1-06": {
+    "criteria": [
+      {
+        "criterionId": "comparison",
+        "level": "Partial",
+        "evidence": [
+          "Canada is colder than New Zealand"
+        ],
+        "missingConcepts": [
+          "population_comparison"
+        ]
+      }
+    ],
+    "strength": "your weather comparison is accurate and grammatical.",
+    "improvement": "the question asks about population too, so add a sentence comparing how crowded the two countries are."
+  },
+  "e-q1-07": {
+    "criteria": [
+      {
+        "criterionId": "comparison",
+        "level": "Invalid",
+        "evidence": [
+          "Canada colder than New Zealand",
+          "New Zealand less crowded Canada"
+        ],
+        "missingConcepts": [
+          "grammar"
+        ]
+      }
+    ],
+    "strength": "you chose the right facts from the table for both features.",
+    "improvement": "every comparison needs 'is' and 'than', for example 'Canada is colder than New Zealand'."
+  },
+  "e-q1-08": {
+    "criteria": [
+      {
+        "criterionId": "comparison",
+        "level": "Invalid",
+        "evidence": [
+          "Canada is not colder than New Zealand"
+        ],
+        "missingConcepts": [
+          "factual_accuracy"
+        ]
+      }
+    ],
+    "strength": "your population comparison and your first weather comparison are correct.",
+    "improvement": "remove 'Canada is not colder than New Zealand', because it contradicts the table and your own first sentence."
+  },
+  "e-q1-09": {
+    "criteria": [
+      {
+        "criterionId": "comparison",
+        "level": "Partial",
+        "evidence": [
+          "Canada is more crowded than New Zealand",
+          "New Zealand is more hot than Canada"
+        ],
+        "missingConcepts": [
+          "grammar"
+        ]
+      }
+    ],
+    "strength": "you compared both features and the facts are right.",
+    "improvement": "short adjectives take -er, so write 'hotter' instead of 'more hot'."
+  },
+  "e-q1-10": {
+    "criteria": [
+      {
+        "criterionId": "comparison",
+        "level": "Full",
+        "evidence": [
+          "Canada is colder and more crowded than New Zealand"
+        ],
+        "missingConcepts": []
+      }
+    ],
+    "strength": "you compared both features correctly in one smooth sentence.",
+    "improvement": "keep using this compact structure; you could add a detail from the table, such as the temperatures."
+  },
+  "e-q2-01": {
+    "criteria": [
+      {
+        "criterionId": "order_items",
+        "level": "All four items",
+        "evidence": [
+          "Soup: Lentil soup",
+          "Main Course: Mixed kebab"
+        ],
+        "missingConcepts": []
+      }
+    ],
+    "strength": "you caught every item Barbara ordered, including that she did not order a drink.",
+    "improvement": "keep listening for small words like 'no, thank you', which you handled well here."
+  },
+  "e-q2-02": {
+    "criteria": [
+      {
+        "criterionId": "order_items",
+        "level": "Three items",
+        "evidence": [
+          "Soup: Lentil soup",
+          "Main Course: Mixed kebab"
+        ],
+        "missingConcepts": [
+          "dessert"
+        ]
+      }
+    ],
+    "strength": "you identified the soup, the main course and the missing drink correctly.",
+    "improvement": "listen again for the dessert: Barbara chose apple pie, not chocolate cake."
+  },
+  "e-q2-03": {
+    "criteria": [
+      {
+        "criterionId": "order_items",
+        "level": "All four items",
+        "evidence": [
+          "Soup: Lentil soup",
+          "Main Course: Mixed kebap"
+        ],
+        "missingConcepts": []
+      }
+    ],
+    "strength": "all four of your answers match what Barbara ordered.",
+    "improvement": "remember the English spelling 'kebab' when you write in English."
+  },
+  "e-q2-04": {
+    "criteria": [
+      {
+        "criterionId": "order_items",
+        "level": "One item",
+        "evidence": [
+          "Main Course: Mixed kebab"
+        ],
+        "missingConcepts": [
+          "soup",
+          "dessert",
+          "beverage"
+        ]
+      }
+    ],
+    "strength": "you understood the main course correctly.",
+    "improvement": "replay the dialogue and note each category as you hear it; the soup, dessert and drink were different."
+  },
+  "e-q2-05": {
+    "criteria": [
+      {
+        "criterionId": "order_items",
+        "level": "Three items",
+        "evidence": [
+          "Soup: Lentil soup",
+          "Main Course: Mixed kebab"
+        ],
+        "missingConcepts": [
+          "dessert"
+        ]
+      }
+    ],
+    "strength": "your soup, main course and drink answers are all correct.",
+    "improvement": "do not leave a line empty; Barbara did order a dessert, apple pie."
+  },
+  "e-q2-06": {
+    "criteria": [
+      {
+        "criterionId": "order_items",
+        "level": "Two items",
+        "evidence": [
+          "Soup: Lentil soup",
+          "Dessert: Apple pie"
+        ],
+        "missingConcepts": [
+          "main_course",
+          "beverage"
+        ]
+      }
+    ],
+    "strength": "you got the soup and the dessert right.",
+    "improvement": "be careful not to mix the two dialogues: grilled chicken and lemonade were Adam's order, and Barbara had no drink."
+  },
+  "e-q2-07": {
+    "criteria": [
+      {
+        "criterionId": "order_items",
+        "level": "All four items",
+        "evidence": [
+          "Soup: Lentil Soup",
+          "Main Course: Mixed Kebab"
+        ],
+        "missingConcepts": []
+      }
+    ],
+    "strength": "every item is correct and neatly written.",
+    "improvement": "keep up this careful note-taking in the next listening task."
+  },
+  "e-q2-08": {
+    "criteria": [
+      {
+        "criterionId": "order_items",
+        "level": "No items",
+        "evidence": [],
+        "missingConcepts": [
+          "soup",
+          "main_course",
+          "dessert",
+          "beverage"
+        ]
+      }
+    ],
+    "strength": "you have the categories ready to fill in.",
+    "improvement": "try writing down even one word you hear for each category; a partial answer earns points."
+  },
+  "e-q2-09": {
+    "criteria": [
+      {
+        "criterionId": "order_items",
+        "level": "Two items",
+        "evidence": [
+          "Main Course: Mixed kebab",
+          "Dessert: Apple pie"
+        ],
+        "missingConcepts": [
+          "soup",
+          "beverage"
+        ]
+      }
+    ],
+    "strength": "your main course and dessert answers are correct.",
+    "improvement": "listen again for the soup (lentil) and notice that Barbara did not order a drink."
+  },
+  "e-q2-10": {
+    "criteria": [
+      {
+        "criterionId": "order_items",
+        "level": "Three items",
+        "evidence": [
+          "Soup: Lentil soup",
+          "Dessert: Apple pie"
+        ],
+        "missingConcepts": [
+          "main_course"
+        ]
+      }
+    ],
+    "strength": "you identified the soup, dessert and drink correctly.",
+    "improvement": "write the main course completely: Barbara ordered a mixed kebab."
+  },
+  "e-q3-01": {
+    "criteria": [
+      {
+        "criterionId": "order_items",
+        "level": "All four items",
+        "evidence": [
+          "Soup: Chicken soup",
+          "Main Course: Grilled chicken"
+        ],
+        "missingConcepts": []
+      }
+    ],
+    "strength": "you wrote Adam's whole order accurately.",
+    "improvement": "keep writing complete phrases like 'a glass of lemonade'; it shows careful listening."
+  },
+  "e-q3-02": {
+    "criteria": [
+      {
+        "criterionId": "order_items",
+        "level": "All four items",
+        "evidence": [
+          "Soup: Chicken soup",
+          "Main Course: Grilled chicken"
+        ],
+        "missingConcepts": []
+      }
+    ],
+    "strength": "all four items match Adam's order.",
+    "improvement": "you can add the quantity words you hear, such as 'a piece of' and 'a glass of'."
+  },
+  "e-q3-03": {
+    "criteria": [
+      {
+        "criterionId": "order_items",
+        "level": "Three items",
+        "evidence": [
+          "Soup: Chicken soup",
+          "Dessert: A piece of cake"
+        ],
+        "missingConcepts": [
+          "main_course"
+        ]
+      }
+    ],
+    "strength": "your soup, dessert and drink are correct.",
+    "improvement": "listen again for the main course: Adam ordered grilled chicken, not fish."
+  },
+  "e-q3-04": {
+    "criteria": [
+      {
+        "criterionId": "order_items",
+        "level": "Three items",
+        "evidence": [
+          "Soup: Chicken soup",
+          "Main Course: Grilled chicken"
+        ],
+        "missingConcepts": [
+          "dessert"
+        ]
+      }
+    ],
+    "strength": "you caught the soup, main course and drink.",
+    "improvement": "Adam did order a dessert, a piece of cake, so listen for it at the end of the dialogue."
+  },
+  "e-q3-05": {
+    "criteria": [
+      {
+        "criterionId": "order_items",
+        "level": "No items",
+        "evidence": [],
+        "missingConcepts": [
+          "soup",
+          "main_course",
+          "dessert",
+          "beverage"
+        ]
+      }
+    ],
+    "strength": "your notes are clear and every category is filled in.",
+    "improvement": "these items are Barbara's order from Part 1; listen to the second dialogue for what Adam orders."
+  },
+  "e-q3-06": {
+    "criteria": [
+      {
+        "criterionId": "order_items",
+        "level": "Three items",
+        "evidence": [
+          "Soup: Chicken soup",
+          "Dessert: A piece of cake"
+        ],
+        "missingConcepts": [
+          "main_course"
+        ]
+      }
+    ],
+    "strength": "you got the soup, dessert and drink right.",
+    "improvement": "notice how the chicken is cooked: Adam asked for grilled chicken."
+  },
+  "e-q3-07": {
+    "criteria": [
+      {
+        "criterionId": "order_items",
+        "level": "Three items",
+        "evidence": [
+          "Soup: Chicken soup",
+          "Main Course: Grilled chicken"
+        ],
+        "missingConcepts": [
+          "beverage"
+        ]
+      }
+    ],
+    "strength": "your food items are all correct.",
+    "improvement": "listen again for the drink: Adam ordered a glass of lemonade."
+  },
+  "e-q3-08": {
+    "criteria": [
+      {
+        "criterionId": "order_items",
+        "level": "One item",
+        "evidence": [
+          "Soup: Chicken soup"
+        ],
+        "missingConcepts": [
+          "main_course",
+          "dessert",
+          "beverage"
+        ]
+      }
+    ],
+    "strength": "you heard the soup correctly.",
+    "improvement": "keep listening until the end of the dialogue and fill in the other three categories."
+  },
+  "e-q3-09": {
+    "criteria": [
+      {
+        "criterionId": "order_items",
+        "level": "All four items",
+        "evidence": [
+          "Soup: Chiken soup",
+          "Main Course: Griled chicken"
+        ],
+        "missingConcepts": []
+      }
+    ],
+    "strength": "you understood every item in Adam's order.",
+    "improvement": "check spellings such as 'chicken', 'grilled' and 'piece'."
+  },
+  "e-q3-10": {
+    "criteria": [
+      {
+        "criterionId": "order_items",
+        "level": "Two items",
+        "evidence": [
+          "Main Course: Grilled chicken",
+          "Beverage: Lemonade"
+        ],
+        "missingConcepts": [
+          "soup",
+          "dessert"
+        ]
+      }
+    ],
+    "strength": "your main course and drink are correct.",
+    "improvement": "listen again for the soup (chicken) and the dessert (a piece of cake)."
+  },
+  "e-q4-01": {
+    "criteria": [
+      {
+        "criterionId": "excuse",
+        "level": "Full",
+        "evidence": [
+          "His friends are going to visit him this evening"
+        ],
+        "missingConcepts": []
+      }
+    ],
+    "strength": "you gave Kevin's exact excuse, including when it happens.",
+    "improvement": "you could also try saying the same idea another way, like 'He is having friends over'."
+  },
+  "e-q4-02": {
+    "criteria": [
+      {
+        "criterionId": "excuse",
+        "level": "Full",
+        "evidence": [
+          "He is having friends over tonight"
+        ],
+        "missingConcepts": []
+      }
+    ],
+    "strength": "you explained Kevin's excuse clearly with a natural phrase.",
+    "improvement": "keep using expressions like 'have friends over'; they make your English sound natural."
+  },
+  "e-q4-03": {
+    "criteria": [
+      {
+        "criterionId": "excuse",
+        "level": "Partial",
+        "evidence": [
+          "He is going to meet friends"
+        ],
+        "missingConcepts": [
+          "supporting_detail"
+        ]
+      }
+    ],
+    "strength": "you understood that Kevin's excuse is about his friends.",
+    "improvement": "add where or when: his friends are coming to his home this evening."
+  },
+  "e-q4-04": {
+    "criteria": [
+      {
+        "criterionId": "excuse",
+        "level": "Invalid",
+        "evidence": [
+          "He is going to visit his friends"
+        ],
+        "missingConcepts": [
+          "excuse_identified"
+        ]
+      }
+    ],
+    "strength": "your sentence is grammatical and uses 'be going to' correctly.",
+    "improvement": "read the dialogue again: Kevin's friends are visiting him, not the other way round."
+  },
+  "e-q4-05": {
+    "criteria": [
+      {
+        "criterionId": "excuse",
+        "level": "Invalid",
+        "evidence": [
+          "He is going to a rock concert with his friends"
+        ],
+        "missingConcepts": [
+          "factual_accuracy"
+        ]
+      }
+    ],
+    "strength": "you noticed that friends and a rock concert are part of the dialogue.",
+    "improvement": "Kevin refuses the concert invitation, so the answer should explain why he is staying home."
+  },
+  "e-q4-06": {
+    "criteria": [
+      {
+        "criterionId": "excuse",
+        "level": "Partial",
+        "evidence": [
+          "He having guests at home"
+        ],
+        "missingConcepts": [
+          "grammar"
+        ]
+      }
+    ],
+    "strength": "you understood Kevin's excuse and where it happens.",
+    "improvement": "the present continuous needs 'is': 'He is having guests at home'."
+  },
+  "e-q4-07": {
+    "criteria": [
+      {
+        "criterionId": "excuse",
+        "level": "Full",
+        "evidence": [
+          "His freinds are coming to his house this evening"
+        ],
+        "missingConcepts": []
+      }
+    ],
+    "strength": "you described Kevin's excuse completely, with the place and the time.",
+    "improvement": "check the spelling of 'friends'."
+  },
+  "e-q4-08": {
+    "criteria": [
+      {
+        "criterionId": "excuse",
+        "level": "Partial",
+        "evidence": [
+          "He is meeting friends"
+        ],
+        "missingConcepts": [
+          "supporting_detail"
+        ]
+      }
+    ],
+    "strength": "you correctly linked Kevin's excuse to his friends.",
+    "improvement": "say more precisely what happens: his friends are going to visit him at home this evening."
+  },
+  "e-q4-09": {
+    "criteria": [
+      {
+        "criterionId": "excuse",
+        "level": "Invalid",
+        "evidence": [
+          "He is having friends over",
+          "they are going to a rock concert together"
+        ],
+        "missingConcepts": [
+          "factual_accuracy"
+        ]
+      }
+    ],
+    "strength": "the first part of your answer is exactly right.",
+    "improvement": "leave out the second part: Kevin is not going to the concert."
+  },
+  "e-q4-10": {
+    "criteria": [
+      {
+        "criterionId": "excuse",
+        "level": "Partial",
+        "evidence": [
+          "His friends are going visit him"
+        ],
+        "missingConcepts": [
+          "grammar"
+        ]
+      }
+    ],
+    "strength": "you identified Kevin's excuse correctly.",
+    "improvement": "'be going to' always needs 'to': 'His friends are going to visit him'."
+  },
+  "e-q5-01": {
+    "criteria": [
+      {
+        "criterionId": "task_content",
+        "level": "Full",
+        "evidence": [
+          "I usually go cycling in the park with my older brother",
+          "because it keeps me fit and the fresh air relaxes me"
+        ],
+        "missingConcepts": []
+      },
+      {
+        "criterionId": "grammar_accuracy",
+        "level": "Full",
+        "evidence": [
+          "I usually go cycling in the park"
+        ],
+        "missingConcepts": []
+      },
+      {
+        "criterionId": "vocabulary_range",
+        "level": "Full",
+        "evidence": [
+          "the fresh air relaxes me",
+          "cook dinner together with our parents"
+        ],
+        "missingConcepts": []
+      }
+    ],
+    "strength": "you answered all three questions with clear reasons and varied vocabulary, within the word limit.",
+    "improvement": "you could add how often you do each activity, using words like 'sometimes' or 'every Sunday'."
+  },
+  "e-q5-02": {
+    "criteria": [
+      {
+        "criterionId": "task_content",
+        "level": "Good",
+        "evidence": [
+          "I usually play football with my friends on Saturdays",
+          "because it is fun"
+        ],
+        "missingConcepts": []
+      },
+      {
+        "criterionId": "grammar_accuracy",
+        "level": "Full",
+        "evidence": [
+          "I usually play football with my friends"
+        ],
+        "missingConcepts": []
+      },
+      {
+        "criterionId": "vocabulary_range",
+        "level": "Good",
+        "evidence": [
+          "play football",
+          "watch TV"
+        ],
+        "missingConcepts": [
+          "vocabulary_variety"
+        ]
+      }
+    ],
+    "strength": "you answered every part of the question with correct Simple Present sentences.",
+    "improvement": "give a more specific reason than 'it is fun' and try some new words, for example 'exciting' or 'it helps me relax'."
+  },
+  "e-q5-03": {
+    "criteria": [
+      {
+        "criterionId": "task_content",
+        "level": "Partial",
+        "evidence": [
+          "I usually read books and draw pictures with my best friend Ayla"
+        ],
+        "missingConcepts": [
+          "reason"
+        ]
+      },
+      {
+        "criterionId": "grammar_accuracy",
+        "level": "Full",
+        "evidence": [
+          "We sometimes go to the cinema in the city centre"
+        ],
+        "missingConcepts": []
+      },
+      {
+        "criterionId": "vocabulary_range",
+        "level": "Full",
+        "evidence": [
+          "draw pictures",
+          "the cinema in the city centre"
+        ],
+        "missingConcepts": []
+      }
+    ],
+    "strength": "your activities and the person you spend time with are clear and well written.",
+    "improvement": "the question also asks why you prefer these activities, so add a sentence with 'because'."
+  },
+  "e-q5-04": {
+    "criteria": [
+      {
+        "criterionId": "task_content",
+        "level": "Partial",
+        "evidence": [
+          "I usually visit my grandparents in the village with my parents"
+        ],
+        "missingConcepts": [
+          "reason"
+        ]
+      },
+      {
+        "criterionId": "grammar_accuracy",
+        "level": "Full",
+        "evidence": [
+          "We pick apples and feed the chickens"
+        ],
+        "missingConcepts": []
+      },
+      {
+        "criterionId": "vocabulary_range",
+        "level": "Full",
+        "evidence": [
+          "pick apples",
+          "feed the chickens"
+        ],
+        "missingConcepts": []
+      }
+    ],
+    "strength": "your sentences paint a vivid picture of your weekend, with accurate grammar.",
+    "improvement": "explain why you enjoy these visits, for example 'because I love animals'."
+  },
+  "e-q5-05": {
+    "criteria": [
+      {
+        "criterionId": "task_content",
+        "level": "Good",
+        "evidence": [
+          "I playing computer games",
+          "because I like win"
+        ],
+        "missingConcepts": []
+      },
+      {
+        "criterionId": "grammar_accuracy",
+        "level": "Partial",
+        "evidence": [
+          "Weekend I playing computer games",
+          "Is very fun because I like win"
+        ],
+        "missingConcepts": [
+          "simple_present",
+          "sentence_structure"
+        ]
+      },
+      {
+        "criterionId": "vocabulary_range",
+        "level": "Partial",
+        "evidence": [
+          "computer games"
+        ],
+        "missingConcepts": [
+          "vocabulary_variety"
+        ]
+      }
+    ],
+    "strength": "you answered what you do, why, and who with.",
+    "improvement": "use the Simple Present: 'At weekends I play computer games. It is very fun because I like winning.'"
+  },
+  "e-q5-06": {
+    "criteria": [
+      {
+        "criterionId": "task_content",
+        "level": "Partial",
+        "evidence": [
+          "I go swimming"
+        ],
+        "missingConcepts": [
+          "companion"
+        ]
+      },
+      {
+        "criterionId": "grammar_accuracy",
+        "level": "Full",
+        "evidence": [
+          "I go swimming"
+        ],
+        "missingConcepts": []
+      },
+      {
+        "criterionId": "vocabulary_range",
+        "level": "Insufficient",
+        "evidence": [
+          "It is good"
+        ],
+        "missingConcepts": [
+          "topic_vocabulary",
+          "vocabulary_variety"
+        ]
+      }
+    ],
+    "strength": "your sentences are grammatically correct.",
+    "improvement": "write 3-4 sentences: say who you swim with, where, and why you like it, using more descriptive words."
+  },
+  "e-q5-07": {
+    "criteria": [
+      {
+        "criterionId": "task_content",
+        "level": "Good",
+        "evidence": [
+          "I usually go to the dance course with my cousin Melis",
+          "I prefer dancing because it makes me happy"
+        ],
+        "missingConcepts": []
+      },
+      {
+        "criterionId": "grammar_accuracy",
+        "level": "Full",
+        "evidence": [
+          "we often walk along the seaside and eat ice cream"
+        ],
+        "missingConcepts": []
+      },
+      {
+        "criterionId": "vocabulary_range",
+        "level": "Full",
+        "evidence": [
+          "it helps me forget about exams",
+          "help my mother with the housework"
+        ],
+        "missingConcepts": []
+      }
+    ],
+    "strength": "your paragraph is rich in detail, grammatically accurate, and answers every question.",
+    "improvement": "the task asks for a maximum of 50 words, so choose your most important ideas and cut the rest."
+  },
+  "e-q5-08": {
+    "criteria": [
+      {
+        "criterionId": "task_content",
+        "level": "Blank",
+        "evidence": [],
+        "missingConcepts": [
+          "activity",
+          "reason",
+          "companion"
+        ]
+      },
+      {
+        "criterionId": "grammar_accuracy",
+        "level": "Blank",
+        "evidence": [],
+        "missingConcepts": [
+          "simple_present",
+          "sentence_structure"
+        ]
+      },
+      {
+        "criterionId": "vocabulary_range",
+        "level": "Blank",
+        "evidence": [],
+        "missingConcepts": [
+          "topic_vocabulary",
+          "vocabulary_variety"
+        ]
+      }
+    ],
+    "strength": "this is a topic you know a lot about, since everyone has weekends.",
+    "improvement": "start with one simple sentence, such as 'On Saturdays I play basketball with my friends', and build from there."
+  },
+  "e-q5-09": {
+    "criteria": [
+      {
+        "criterionId": "task_content",
+        "level": "Full",
+        "evidence": [
+          "my father and me goes fishing on the lake",
+          "I love it becuse it is quiet and we talk a lot"
+        ],
+        "missingConcepts": []
+      },
+      {
+        "criterionId": "grammar_accuracy",
+        "level": "Good",
+        "evidence": [
+          "my father and me goes fishing",
+          "we catches big fish"
+        ],
+        "missingConcepts": [
+          "simple_present"
+        ]
+      },
+      {
+        "criterionId": "vocabulary_range",
+        "level": "Full",
+        "evidence": [
+          "goes fishing on the lake",
+          "catches big fish and cook it at home"
+        ],
+        "missingConcepts": []
+      }
+    ],
+    "strength": "you answered all three questions with a personal, clear reason.",
+    "improvement": "check the verb forms: 'my father and I go fishing' and 'we catch big fish'."
+  },
+  "e-q5-10": {
+    "criteria": [
+      {
+        "criterionId": "task_content",
+        "level": "Good",
+        "evidence": [
+          "I usually go to the shopping mall with my friends at weekends",
+          "because it is fun"
+        ],
+        "missingConcepts": []
+      },
+      {
+        "criterionId": "grammar_accuracy",
+        "level": "Full",
+        "evidence": [
+          "We go there because it is fun"
+        ],
+        "missingConcepts": []
+      },
+      {
+        "criterionId": "vocabulary_range",
+        "level": "Partial",
+        "evidence": [
+          "We go to shops and we go to the cafe"
+        ],
+        "missingConcepts": [
+          "vocabulary_variety"
+        ]
+      }
+    ],
+    "strength": "you answered all three questions in correct sentences.",
+    "improvement": "avoid repeating 'go'; try verbs like 'visit', 'look around' or 'have a drink', and give a more specific reason."
+  }
+}

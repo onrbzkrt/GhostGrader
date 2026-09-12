@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { answers, assignment, type AnalysisResult, type Assignment, type Decision } from "@gg/shared";
+import { answers, assignment, englishAnswers, englishAssignment, type AnalysisResult, type Assignment, type Decision } from "@gg/shared";
 import { selectAnalyzer } from "../src/analyzer";
 import { createApp } from "../src/app";
 import { SCHEMA_VERSION, Store } from "../src/store";
@@ -72,11 +72,11 @@ describe("auth and health", () => {
 });
 
 describe("multi-tenant data", () => {
-  it("seeds one course per teacher and keeps assignments and answers separate", async () => {
+  it("seeds the demo teacher's two courses, the second teacher's one, and keeps assignments and answers separate", async () => {
     const app = mkApp();
     const c1 = await (await get(app, "/courses")).json();
     const c2 = await (await get(app, "/courses", T2)).json();
-    expect(c1.map((c: { id: string }) => c.id)).toEqual(["c-chem101"]);
+    expect(c1.map((c: { id: string }) => c.id)).toEqual(["c-chem101", "c-eng8"]);
     expect(c2.map((c: { id: string }) => c.id)).toEqual(["c-hist210"]);
     expect((await get(app, `/assignments/${assignment.id}`)).status).toBe(200);
     expect((await get(app, `/assignments/${assignment.id}`, T2)).status).toBe(404);
@@ -237,7 +237,45 @@ describe("POST /analyze on the seeded assignment", () => {
   });
 });
 
+describe("POST /analyze on the English exam", () => {
+  it("gives a one-feature comparison half credit and names the missing population comparison", async () => {
+    const res = await post(mkApp(), "/analyze", { assignmentId: englishAssignment.id, questionId: "q-eng-compare", answerId: "e-q1-02" });
+    expect(res.status).toBe(200);
+    const body = (await res.json()) as AnalysisResult;
+    expect(body).toMatchObject({ answerId: "e-q1-02", suggestedTotal: 5, maxTotal: 10, missingConcepts: ["population_comparison"] });
+    expect(body.feedbackDraft).toMatch(/^Mehmet,/);
+  });
+
+  it("scores a listening answer by how many items match that question's answer key", async () => {
+    const res = await post(mkApp(), "/analyze", { assignmentId: englishAssignment.id, questionId: "q-eng-order-barbara", answerId: "e-q2-02" });
+    const body = (await res.json()) as AnalysisResult;
+    expect(body).toMatchObject({ suggestedTotal: 15, maxTotal: 20, missingConcepts: ["dessert"] });
+  });
+
+  it("sums the three analytic criteria of the paragraph question", async () => {
+    const res = await post(mkApp(), "/analyze", { assignmentId: englishAssignment.id, questionId: "q-eng-weekend", answerId: "e-q5-09" });
+    const body = (await res.json()) as AnalysisResult;
+    expect(body.criteria.map((c) => c.criterionId)).toEqual(["task_content", "grammar_accuracy", "vocabulary_range"]);
+    expect(body).toMatchObject({ suggestedTotal: 11, maxTotal: 12, missingConcepts: ["simple_present"] });
+  });
+});
+
 describe("decision flow", () => {
+  it("flags two English one-feature comparisons graded 10 and 0 against the same half-credit suggestion", async () => {
+    const app = mkApp();
+    const eng = (answerId: string, points: number): Decision => {
+      const a = englishAnswers.find((x) => x.id === answerId)!;
+      return {
+        id: `${answerId}:grade`, assignmentId: englishAssignment.id, questionId: a.questionId, answerId, studentId: a.studentId,
+        studentIndex: a.studentIndex, studentName: a.studentName, points, maxPoints: 10, suggestedPoints: 5,
+        missingConcepts: ["population_comparison"], comment: "", at: a.studentIndex,
+      };
+    };
+    expect((await (await post(app, "/decision", { decision: eng("e-q1-02", 10) })).json()).alert).toBeNull();
+    const { alert } = await (await post(app, "/decision", { decision: eng("e-q1-06", 0) })).json();
+    expect(alert).toMatchObject({ questionId: "q-eng-compare", priorStudentName: "Mehmet Kaya", sharedConcepts: ["population_comparison"], recommendedPoints: 10 });
+  });
+
   it("raises the comparison alert on answer 11 after answer 4, and override silences it", async () => {
     const app = mkApp();
     // First student: no one to compare with.
@@ -359,10 +397,13 @@ describe("Store persistence", () => {
     expect(s2.course(T1, course.id)?.name).toBe("Persisted");
   });
 
-  it("seeds both questions with their rubrics and the demo answers, ready to grade without an LMS", () => {
+  it("seeds both assignments with their rubrics and the demo answers, ready to grade without an LMS", () => {
     const s = new Store();
     expect(s.assignment(T1, assignment.id)?.questions).toHaveLength(2);
     expect(s.answersFor(assignment.id)).toHaveLength(20);
+    expect(s.assignmentsFor(T1, "c-eng8").map((a) => a.id)).toEqual([englishAssignment.id]);
+    expect(s.assignment(T1, englishAssignment.id)?.questions).toHaveLength(5);
+    expect(s.answersFor(englishAssignment.id)).toHaveLength(50);
     expect(new Store(undefined, { withAnswers: false }).answersFor(assignment.id)).toEqual([]);
   });
 
